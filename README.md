@@ -158,11 +158,18 @@ Réaliser des maquettes (incluant couleurs, fontes, et autres éléments de desi
 
 - Combien d'entités sont-elles nécessaires pour ce projet, et que représenterait chacune d'entre elles? Quelles propriétés pourraient-elles avoir?
 
-> _Ma réponse:_
+> une seule: livre
+	- title
+	- categories(list)
+	- chapters(list)
+		- title
+		- text
+
+
 
 - Quelles relations envisageriez-vous entre ces entités? Précisez pour chaque relation: One-to-one, One-to-many, Many-to-many, composition ou aggrégation.
 
-> _Ma réponse:_
+> aucune
 
 #### 💻 Travail à réaliser
 
@@ -170,11 +177,13 @@ A l'aide de l'outil de votre choix (outil suggéré: [Lucidchart](https://www.lu
 
 Inclure votre production dans votre dépôt ou donner le **lien de partage** de votre fichier.
 
-> _Lien de partage de mon MCD:_
+> https://drive.google.com/file/d/1IU8KkFPO2Ae7ZJ9qOrtqSzIDe72lNJHM/view?usp=sharing
 
 Puis, à l'aide de l'interface de votre choix (outil suggéré: PHPMyAdmin pour une base de données MySQL/MariaDB), créez le schéma de base de données (tables, colonnes...) nécessaire au bon fonctionnement du projet.
 
 Exporter le code nécessaire à la migration de votre schéma (code à exécuter dans le moteur de base de données pour obtenir une copie exacte de la base de données que vous avez conçue), et l'inclure dans votre dépôt.
+
+> je le ferais quand je rentrerais les données (schemaless)
 
 #### Bonus
 
@@ -182,6 +191,19 @@ Exporter le code nécessaire à la migration de votre schéma (code à exécuter
 
 Ecrivez vous-mêmes le code nécessaire à la migration de votre schéma au lieu de le générer automatiquement.
 
+[
+	{
+		title: ...,
+		categories: [],
+		chapters: [
+			{
+				title:...,
+				text:...
+			}
+		]
+	},
+	{...}
+]
 ---
 
 ## Partie 2: réalisation de l'application
