@@ -222,21 +222,23 @@ Ecrivez vous-mêmes le code nécessaire à la migration de votre schéma au lieu
 
 - Combien d'entités envisagez-vous de créer et pourquoi? Combien de contrôleurs envisagez-vous de créer et pourquoi?
 
-> _Ma réponse:_
+> Un controller pour les livres les chapitres sont directement inclus dans les livres et une entité livre.
 
 - Un CRUD suffira-t-il pour chacune des entités, ou y a-t-il des entités pour lesquelles il faudra définir de la logique spécifique?
 
-> _Ma réponse:_
+> oui pour livre il sera nécéssaire de récupérer les catégories de DefCategories table pour validation
 
 - Quelles sont les relations entre les entités, et comment allez-vous les matérialiser dans votre API?
 
-> _Ma réponse:_
+> aucune relation DefCategories me servira juste de validateur et de donné pour le front
 
 #### 💻 Travail à réaliser
 
 A l'aide du langage/framework de votre choix (suggéré: Java/Spring), mettez en place une API capable d'interagir avec votre base de données à la requête d'une application client.
 
 Vous pouvez, pour ce faire, utiliser le squelette d'application existant dans le dossier **/api**.
+
+> J'utilise nestJS pour l'API.
 
 ---
 
