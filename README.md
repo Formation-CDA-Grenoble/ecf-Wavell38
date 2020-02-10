@@ -280,15 +280,15 @@ Vous pouvez, pour ce faire, utiliser le squelette d'application existant dans le
 
 - Quelles différences techniques y aura-t-il entre l'interface utilisateur et l'interface administrateur?
 
-> _Ma réponse:_
+> l'interface utilisateur ne pourra pas modifier les livres ni les chapitres. Pas de request Post ni put ni delete.
 
 - Qu'allez-vous utiliser pour permettre l'affichage de différentes pages dans votre application?
 
-> _Ma réponse:_
+> J'aurais bien utilisé react navigation mais c'est pas forcement utile dans ce cas. donc juste un switch de composant
 
 - Si un administateur modifie un contenu, la modification sera-t-elle visible immédiatement dans l'interface utilisateur? Si non, que faudrait-il faire pour la voir apapraître?
 
-> _Ma réponse:_
+> Non la modification ne sera pas visible directement. Il faudra donc renvoyé une request à l'API. Soit à l'aide d'un refresh auto timer, soit manuellement par l'utilisateur, soit avec recu directement par le serveur grace aux observables.
 
 #### 💻 Travail à réaliser
 
