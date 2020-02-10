@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Jean Neymar Mobile",
-    "slug": "mobile",
+    "name": "project-type-react-native",
+    "slug": "project-type-react-native",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
