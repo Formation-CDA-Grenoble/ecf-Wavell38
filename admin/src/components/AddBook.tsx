@@ -35,6 +35,7 @@ export default class AddBook extends React.Component<any,any,any> {
 
   		Axios.post(URL, data).then(res => {
   			console.log(res.data)
+              this.props.goTo('listBooks', res.data)
   		}).catch(err => {
   			console.log(err)
   		})

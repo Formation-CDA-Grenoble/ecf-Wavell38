@@ -43,6 +43,7 @@ export default class AddChapter extends React.Component<any,any,any> {
 
   		Axios.put(URL, data).then(res => {
   			console.log(res.data)
+            this.props.goTo('listBooks')
   		}).catch(err => {
   			console.log(err)
   		})
