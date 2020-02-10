@@ -108,11 +108,27 @@ Inclure votre production dans le dépôt Git, ou le **lien de partage** du table
 
 - Combien de pages sont-elles nécessaires, à votre avis, pour répondre aux spécifications fonctionnelles définies ci-dessus?
 
-> _Ma réponse:_
+> coté admin trois
+	- voir la liste des livres
+	- ajouter un livre
+	- ajouter un chapitre
+
+>coté utilisateur trois
+	- voir les livre
+	- voir les chapitre
+	- lire un chapitre
 
 - A quoi le plan du site ressemblera-t-il? Quelle page permettra de passer à quelle autre?
 
-> _Ma réponse:_
+> coté admin la page home sera une liste de livre avec un button ajouter un chapitre dans chaque item + un button ajouter un livre 
+	- home
+		- ajouter Livre
+		- ajouter Chapitre
+
+> coté utilisateur
+	- home (liste de livre)
+		- liste de chapitre
+			- chapitre
 
 #### 💻 Travail à réaliser
 
@@ -120,7 +136,7 @@ A l'aide de l'outil de votre choix (outil suggéré: https://wireframe.cc), réa
 
 Inclure vos productions dans le dépôt Git, dans un dossier **mockups**, ou le **lien de partage** de chacun de vos wireframes (attention, sur wireframe.cc, ne pas oublier de cliquer sur **Save**, sinon tous votre travail est perdu!).
 
-> _Liens de partage de mes wireframes:_
+> dossier mockups
 
 #### Bonus
 
@@ -138,7 +154,7 @@ Réaliser des maquettes (incluant couleurs, fontes, et autres éléments de desi
 
 - Choisiriez-vous plutôt une base de données de type SQL, ou NoSQL pour ce projet? Justifiez votre choix.
 
-> _Ma réponse:_
+> NoSQL plus rapide, très modulable, adaptable.
 
 - Combien d'entités sont-elles nécessaires pour ce projet, et que représenterait chacune d'entre elles? Quelles propriétés pourraient-elles avoir?
 
