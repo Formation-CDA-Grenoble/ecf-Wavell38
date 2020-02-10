@@ -70,15 +70,24 @@ Comme personne n'est parfait, il n'est pas exclu que cet examen contienne des co
 
 - A combien de types d'utilisateurs le projet s'adresse-t-il? Nommez chacun de ces types.
 
-> _Ma réponse:_
+> Dans un premier temps deux types: l'administrateur et les l'utilisateurs.
+> Dans un second temps trois types: l'administrateur, les l'utilisateurs non abonnés et les l'utilisateurs abonnés.
 
 - Combien d'applications faudra-t-il créer et quel sera le type de chacun d'entre elle?
 
-> _Ma réponse:_
+> Il faudra donc créer trois applications : Une web pour la partis administration (front), une mobile pour la partis client (front) et la partis API (back)
 
 - Quelles sont les fonctionnalités principales du projet? Listez-les par ordre de priorité (de la plus importante à la moins importante).
 
-> _Ma réponse:_
+> Créer l'API avecc les requests pour les livres
+> Enregistrer un livre
+> Ajouter des catégories au livre
+> Enregistrer un chapitre
+> Voir la liste des livres
+> Voir la liste des chapitres
+> Lire un chapitre
+> Like un chapitre
+> Partager sur les réseaux sociaux
 
 #### 💻 Travail à réaliser
 
@@ -86,7 +95,7 @@ En se basant sur la demande client, rédiger les spécifications fonctionnelles 
 
 Inclure votre production dans le dépôt Git, ou le **lien de partage** du tableau Trello.
 
-> _Lien de partage de mon tableau Trello:_
+> https://trello.com/invite/b/jTxbZeRh/5da85fa1e659d2ee9b6e747b4dfc589b/ecf-vincent
 
 ---
 
