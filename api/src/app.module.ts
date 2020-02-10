@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+import { BooksModule } from './books/books.module';
 
 const options:any = {
     useNewUrlParser: true, 
@@ -13,6 +14,6 @@ const dbName:string = 'ecf'
 const db:string = `mongodb+srv://${username}:${password}@cluster0-itx0r.mongodb.net/${dbName}?retryWrites=true&w=majority`
 
 @Module({
-  imports: [MongooseModule.forRoot(db, options)],
+  imports: [MongooseModule.forRoot(db, options), BooksModule],
 })
 export class AppModule {}
