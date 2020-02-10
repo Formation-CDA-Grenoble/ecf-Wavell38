@@ -2,7 +2,7 @@ import React from 'react'
 import Axios from 'axios'
 import { URL } from '../constante'
 
-export default class AddBook extends React.Component<any,any,any> {
+export default class AddChapter extends React.Component<any,any,any> {
 
 	public constructor(props:any) {
 		super(props)
