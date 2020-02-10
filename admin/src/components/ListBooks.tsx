@@ -2,14 +2,16 @@ import React from 'react'
 
 import ListBooksItem from './ListBooksItem'
 
-export default (props:any) => {
+export default class extends React.Component<any,any,any> {
+    render() {
     return(
         <div>
-            { props.books.map((item:any, index:number) => {
+            {this.props.books.map((item:any, index:number) => {
                 return(
-                    <ListBooksItem book={ item } key={ `itembook${index}` } goTo={ props.goTo }/>
+                    <ListBooksItem book={ item } key={ `itembook${index}` } goTo={ this.props.goTo }/>
                 )
             }) }
         </div>
 	)
+    }
 }

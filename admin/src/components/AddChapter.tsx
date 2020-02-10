@@ -13,17 +13,16 @@ export default class AddChapter extends React.Component<any,any,any> {
 		}
 	}
 
-	private handleChange = () => (event:any) => {
+	private handleChange = (event:any) => {
         const name:string = event.target.name
         const value:string  = event.target.value
-
 		this.setState({
 		    [name]: value
 		})
 	}
 	
 
-	private handleSubmit = () => (event:any) => {
+	private handleSubmit = (event:any) => {
     	event.preventDefault()
 
     	this.addChapter()
@@ -40,10 +39,11 @@ export default class AddChapter extends React.Component<any,any,any> {
                 }
             ]
   		}
+          console.log(data)
 
-  		Axios.put(URL, data).then(res => {
+  		Axios.put(URL+`/${this.props.book._id}`, data).then(res => {
   			console.log(res.data)
-            this.props.goTo('listBooks')
+            this.props.goTo('listBooks', res.data)
   		}).catch(err => {
   			console.log(err)
   		})
@@ -55,12 +55,20 @@ export default class AddChapter extends React.Component<any,any,any> {
 			<form onSubmit={ this.handleSubmit }>
         		<label>
           			Titre :
-          			<input type="text" value={ this.state.title } onChange={ this.handleChange } placeholder="Un titre..." />
+          			<input 
+                        type="text" 
+                        value={ this.state.title } 
+                        onChange={ this.handleChange } 
+                        placeholder="Un titre..." 
+                        name="title"/>
         		</label>
 
                 <label>
                     Chapitre :
-                    <textarea value={ this.state.text } onChange={ this.handleChange } />
+                    <textarea 
+                        value={ this.state.text } 
+                        onChange={ this.handleChange } 
+                        name="text"/>
                 </label>
         		<input type="submit" value="Ajouter un chapitre" />
       		</form>

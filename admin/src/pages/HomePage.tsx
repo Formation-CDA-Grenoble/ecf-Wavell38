@@ -34,10 +34,11 @@ export default class HomePage extends React.Component<any,any,any> {
   	}
 
 
-    private goTo = (component:string, book?:any) => () => {
+    private goTo = (component:string, book?:any) => {
         console.log("s")
         this.setState({
-            component
+            component,   
+            book
         })
         if(component === "listBooks") {
             this.getBooks()
@@ -45,25 +46,27 @@ export default class HomePage extends React.Component<any,any,any> {
     } 
 
 	render() {
+        console.log(this.state)
         const { books } = this.state
         const { book } = this.state
+
         const components:any = {
-            "addChapter": <AddChapter book={ book } />,
-            "listBooks": <ListBooks books={ books } />,
-            "addBook": <AddBook />
+            addChapter: <AddChapter book={ book } goTo={ this.goTo } />,
+            listBooks: <ListBooks books={ books } goTo={ this.goTo }/>,
+            addBook: <AddBook goTo={ this.goTo }/>
         }
         const ComponentName = components[this.state.component]
 
         if(books === null) {
             return(
-                <button onClick={ this.goTo('addBook') }>Ajouter un livre</button>
+                <button onClick={ () => this.goTo('addBook') }>Ajouter un livre</button>
             )
         }
 
 		return(
             <div>
-    			<button onClick={ this.goTo('addBook') }>Ajouter un livre</button>
-                <ComponentName goTo={ this.goTo }/>
+    			<button onClick={ () => this.goTo('addBook') }>Ajouter un livre</button>
+                { ComponentName }
             </div>
 		)
 	}

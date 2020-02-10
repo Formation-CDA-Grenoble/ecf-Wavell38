@@ -13,14 +13,14 @@ export default class AddBook extends React.Component<any,any,any> {
 		}
 	}
 
-	private handleChange = () => (event:any) => {
+	private handleChange = (event:any) => {
 		this.setState({
 		 	title: event.target.value
 		})
 	}
 	
 
-	private handleSubmit = () => (event:any) => {
+	private handleSubmit = (event:any) => {
     	event.preventDefault()
 
     	this.addBook()
@@ -34,8 +34,8 @@ export default class AddBook extends React.Component<any,any,any> {
   		}
 
   		Axios.post(URL, data).then(res => {
-  			console.log(res.data)
-              this.props.goTo('listBooks', res.data)
+  			console.log(res.data, this.props)
+            this.props.goTo('listBooks')
   		}).catch(err => {
   			console.log(err)
   		})
@@ -47,7 +47,10 @@ export default class AddBook extends React.Component<any,any,any> {
 			<form onSubmit={ this.handleSubmit }>
         		<label>
           			Titre :
-          			<input type="text" value={ this.state.title } onChange={ this.handleChange } placeholder="Un titre..." />
+          			<input type="text" 
+                        value={ this.state.title } 
+                        onChange={ this.handleChange } 
+                        placeholder="Un titre..." />
         		</label>
         		<input type="submit" value="Ajouter un livre" />
       		</form>
