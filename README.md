@@ -252,7 +252,7 @@ Vous pouvez, pour ce faire, utiliser le squelette d'application existant dans le
 
 - Quelle technique allez-vous utiliser pour communiquer avec l'API?
 
-> _Ma réponse:_
+> Axios
 
 - Comptez-vous séparer l'affichage de la gestion des données? Pouvez-vous expliquer votre choix?
 
